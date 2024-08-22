@@ -1,6 +1,8 @@
+import { getPriorityClass } from '@/helpers/buttonStyle';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { HiOutlineDotsVertical } from "react-icons/hi";
+
 
 interface TableProps {
   headers: string[];
@@ -15,18 +17,6 @@ const Table: React.FC<TableProps> = ({ headers, data }) => {
     return match ? parseInt(match[1], 10) : 0;
   };
 
-  const getPriorityClass = (priority: string) => {
-    switch (priority) {
-      case 'Low':
-        return 'bg-[#E8FAF5] text-green-500';
-      case 'Medium':
-        return 'bg-[#FFF9EE] text-[#FFC85D]';
-      case 'High':
-        return 'bg-[#FFECEC] text-[#FB4242]';
-      default:
-        return 'bg-gray-500 text-white';
-    }
-  };
 
   const ActionDropdown: React.FC<{ onClick: (action: ActionType) => void }> = ({ onClick }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,32 +32,32 @@ const Table: React.FC<TableProps> = ({ headers, data }) => {
           <HiOutlineDotsVertical className='text-[18px]' />
         </button>
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
-            <ul className="py-1 text-sm text-gray-700">
-              <li>
-                <button onClick={() => onClick('view')} className="block px-4 py-2 hover:bg-gray-100 w-full text-left">
-                  View
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onClick('edit')} className="block px-4 py-2 hover:bg-gray-100 w-full text-left">
-                  Edit
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onClick('delete')} className="block px-4 py-2 hover:bg-gray-100 w-full text-left">
-                  Delete
-                </button>
-              </li>
-            </ul>
-          </div>
+          <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-100">
+          <ul className="py-1 text-sm text-gray-700">
+            <li>
+              <button onClick={() => onClick('view')} className="block px-4 py-2 hover:bg-gray-100 w-full text-left">
+                View
+              </button>
+            </li>
+            <li>
+              <button onClick={() => onClick('edit')} className="block px-4 py-2 hover:bg-gray-100 w-full text-left">
+                Edit
+              </button>
+            </li>
+            <li>
+              <button onClick={() => onClick('delete')} className="block px-4 py-2 hover:bg-gray-100 w-full text-left">
+                Delete
+              </button>
+            </li>
+          </ul>
+        </div>
         )}
       </div>
     );
   };
 
   return (
-    <div className="overflow-x-auto">
+    <div>
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-white">
           <tr>
@@ -108,14 +98,14 @@ const Table: React.FC<TableProps> = ({ headers, data }) => {
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row["Assigned Date"]}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row["Due Date"]}</td>
                 <td className="px-6 py-4 text-sm text-gray-500">
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                  <div className="w-full bg-gray-200 rounded-full h-[6px]">
                     <div
-                      className="bg-blue-600 h-2.5 rounded-full"
+                      className="bg-[#5C67F7] h-[6px] rounded-full"
                       style={{ width: `${completionPercent}%` }}
                     ></div>
                   </div>
                   <div className="text-sm whitespace-nowrap text-gray-500 mt-1">
-                    {completionPercent}% completed
+                    <span className='font-[500] text-[#5C67F7]'>{completionPercent}%</span> completed
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">

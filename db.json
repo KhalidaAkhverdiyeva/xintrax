@@ -1,0 +1,60 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "logo": "https://spruko.com/demo/xintra/dist/assets/images/company-logos/1.png", 
+        "projectName": "Development of Enhanced ",
+        "completedTasks": "18/22",
+        "description": "Build an advanced analytics dashboard integrating real-time data from multiple sources.",
+        "assignedDate": "15,Jun 2024",
+        "dueDate": "34,Aug 2024",
+        "completionPercent": 65,
+        "priority": "High"
+      },
+      {
+        "id": 2,
+        "logo": "https://spruko.com/demo/xintra/dist/assets/images/company-logos/3.png", 
+        "projectName": "E-commerce Platform",
+        "completedTasks": "4/5",
+        "description": "Enhance performance and user experience for a high-traffic e-commerce platform.",
+        "assignedDate": "02,Mar 2024",
+        "dueDate": "12,Dec 2024",
+        "completionPercent": 34,
+        "priority": "Medium"
+      },
+      {
+        "id": 3,
+        "logo": "https://spruko.com/demo/xintra/dist/assets/images/company-logos/7.png", 
+        "projectName": "Data Migration to Cloud",
+        "completedTasks": "5/10",
+        "description": "Transfer legacy data systems to cloud infrastructure for scalability and accessibility.",
+        "assignedDate": "11,Apr 2024",
+        "dueDate": "2,Aug 2024",
+        "completionPercent": 76,
+        "priority": "Low"
+      },
+      {
+        "id": 4,
+        "logo": "https://spruko.com/demo/xintra/dist/assets/images/company-logos/8.png", 
+        "projectName": "AI Powered Customer Support",
+        "completedTasks": "1/7",
+        "description": "Conduct a comprehensive audit and implement security measures to protect data and systems.",
+        "assignedDate": "21,Feb 2024",
+        "dueDate": "22,Sep 2024",
+        "completionPercent": 20,
+        "priority": "High"
+      },
+      {
+        "id": 5,
+        "logo": "https://spruko.com/demo/xintra/dist/assets/images/company-logos/4.png", 
+        "projectName": "Mobile App Launch",
+        "completedTasks": "24/30",
+        "description": "Develop and release a new mobile application for iOS and Android platforms.",
+        "assignedDate": "25,Sep 2024",
+        "dueDate": "31,Dec 2024",
+        "completionPercent": 50,
+        "priority": "Medium"
+      }
+    ]
+  }
+  
